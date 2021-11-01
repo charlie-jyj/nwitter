@@ -5,8 +5,8 @@ import { authService } from "fbase";
 // router  역할을 하면서 코드 가독성을 위해 상태는 App 에서 관리
 function App() {
   // [상태, 상태 관리 함수] js destructuring assignment
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  console.log(authService.currentUser);
+  const [isLoggedIn, setIsLoggedIn] = useState(authService.currentUser);
+
  return (
    <>
   <AppRouter isLoggedIn={isLoggedIn} />
